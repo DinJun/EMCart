@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/rlQuantitySet">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivProductImageDetail"
+                android:layout_width="match_parent"
+                android:layout_height="240dp" />
+
+            <TextView
+                android:id="@+id/tvProductNameDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_below="@id/ivProductImageDetail"/>
+
+            <TextView
+                android:id="@+id/tvProductPriceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/tvProductNameDetail"/>
+
+            <View
+                android:id="@+id/vDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@id/tvProductPriceDetail"/>
+
+            <TextView
+                android:id="@+id/tvProductDescDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:layout_below="@id/vDivider"/>
+
+            <TextView
+                android:id="@+id/tvStockLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Stock left: "
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:layout_below="@id/tvProductDescDetail"/>
+
+            <TextView
+                android:id="@+id/tvProductQuantityDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="10"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_toRightOf="@+id/tvStockLeft"
+                android:layout_below="@id/tvProductDescDetail"/>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlQuantitySet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btnAddCart"
+        android:padding="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/minusBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="25dp"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/cardViewMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="#fff"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvProductQuantityDetailCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/minusBtn"
+            android:layout_centerVertical="true"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/plusBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="25dp"
+            android:layout_toRightOf="@+id/tvProductQuantityDetailCount"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/cardViewPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="#fff"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAddCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Add To Cart"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"/>
+</RelativeLayout>

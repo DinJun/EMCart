@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tvCartItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            android:text="Product Name"/>
+
+        <View
+            android:id="@+id/vCartDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/white"
+            android:layout_below="@id/tvCartItemName"/>
+
+        <TextView
+            android:id="@+id/tvCartPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="Price per item: RM"
+            android:layout_below="@+id/vCartDivider"/>
+
+        <TextView
+            android:id="@+id/tvCartItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="0.00"
+            android:layout_below="@+id/vCartDivider"
+            android:layout_toRightOf="@+id/tvCartPriceText"/>
+
+        <TextView
+            android:id="@+id/tvCartQuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="Quantity: "
+            android:layout_below="@+id/tvCartPriceText"/>
+
+        <TextView
+            android:id="@+id/tvCartItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="0"
+            android:layout_below="@id/tvCartPriceText"
+            android:layout_toRightOf="@id/tvCartQuantityText"/>
+
+        <Button
+            android:id="@+id/btnRemoveCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vCartDivider"
+            android:layout_above="@id/tvCartItemTotalPrice"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorWhite"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:text="Remove"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="RM"
+            android:layout_below="@id/tvCartQuantityText"
+            android:layout_toLeftOf="@+id/tvCartItemTotalPrice"/>
+        <TextView
+            android:id="@+id/tvCartItemTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="0.00"
+            android:layout_below="@id/tvCartQuantityText"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

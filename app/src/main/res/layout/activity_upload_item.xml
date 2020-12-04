@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadItemActivity">
+
+    <ImageView
+        android:id="@+id/uploadItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/no_image"/>
+
+    <EditText
+        android:id="@+id/uploadItemName"
+        android:ems="16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/uploadItemImage"
+        android:layout_margin="7dp"
+        android:inputType="text"
+        android:hint="Item name"/>
+
+    <EditText
+        android:id="@+id/uploadItemDesc"
+        android:ems="16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/uploadItemName"
+        android:layout_margin="7dp"
+        android:inputType="text"
+        android:hint="Item description"/>
+
+    <EditText
+        android:id="@+id/uploadItemPrice"
+        android:ems="16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/uploadItemDesc"
+        android:layout_margin="7dp"
+        android:inputType="numberDecimal"
+        android:hint="Item price per unit"/>
+
+    <EditText
+        android:id="@+id/uploadItemQuantity"
+        android:ems="16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/uploadItemPrice"
+        android:layout_margin="7dp"
+        android:inputType="number"
+        android:hint="Item quantity in stock"/>
+
+    <Button
+        android:id="@+id/btnAddProductItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:text="Add Product"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/rlUploadProgressBarBg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true" >
+
+        <ProgressBar
+            android:id="@+id/uploadProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

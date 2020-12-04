@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/iVLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/emcart" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite"
+        android:layout_below="@id/iVLogo"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite"
+        android:layout_below="@id/login_email"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPassword"
+        android:hint="Password"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginBtn"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_below="@id/login_password"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="25dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cardViewLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tVRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorWhite"
+        android:text="@string/loginActivity_register" />
+
+    <TextView
+        android:id="@+id/tVForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tVRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorWhite"
+        android:text="Forgot Password" />
+
+    <RelativeLayout
+        android:id="@+id/rlLoginProgressBarBg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:id="@+id/loginProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/titleRegister"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@drawable/register_bg">
+
+        <TextView
+            android:id="@+id/tvRegisterWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Register"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleRegister">
+
+        <EditText
+            android:id="@+id/register_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/colorWhite"
+            android:ems="13"
+            android:layout_centerHorizontal="true"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:hint="Full name"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorWhite"
+            android:ems="13"
+            android:layout_centerHorizontal="true"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:layout_below="@id/register_fullname"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorWhite"
+            android:ems="13"
+            android:layout_below="@+id/register_email"
+            android:layout_centerHorizontal="true"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/register_confirmpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorWhite"
+            android:ems="13"
+            android:layout_below="@+id/register_password"
+            android:layout_centerHorizontal="true"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/registerBtn"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            android:layout_below="@+id/register_confirmpassword">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/cardViewRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Register"
+                    android:textColor="#fff"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

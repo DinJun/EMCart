@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tvShippingDetailItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            android:text="Product Name"/>
+
+        <View
+            android:id="@+id/vShippingDetailItemDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/white"
+            android:layout_below="@id/tvShippingDetailItemName"/>
+
+        <TextView
+            android:id="@+id/tvShippingDetailItemPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="Price per item: RM"
+            android:layout_below="@+id/vShippingDetailItemDivider"/>
+
+        <TextView
+            android:id="@+id/tvShippingDetailItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="0.00"
+            android:layout_below="@+id/vShippingDetailItemDivider"
+            android:layout_toRightOf="@+id/tvShippingDetailItemPriceText"/>
+
+        <TextView
+            android:id="@+id/tvShippingDetailItemQuantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="Quantity: "
+            android:layout_below="@+id/tvShippingDetailItemPriceText"/>
+
+        <TextView
+            android:id="@+id/tvShippingDetailItemQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="0"
+            android:layout_below="@id/tvShippingDetailItemPriceText"
+            android:layout_toRightOf="@id/tvShippingDetailItemQuantityText"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="RM"
+            android:layout_below="@id/tvShippingDetailItemQuantity"
+            android:layout_toLeftOf="@+id/tvShippingDetailItemTotalPrice"/>
+        <TextView
+            android:id="@+id/tvShippingDetailItemTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="0.00"
+            android:layout_below="@id/tvShippingDetailItemQuantity"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

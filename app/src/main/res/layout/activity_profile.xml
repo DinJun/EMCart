@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/profileCloseBtnToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:id="@+id/profileUpdateBtnToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+        
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleProfile"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:layout_below="@id/appBarProfile"
+        android:background="@drawable/register_bg">
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Profile"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvProfileFullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleProfile"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Full Name"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/etProfileFullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:maxLength="30"
+        android:inputType="text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvProfileFullname"/>
+
+    <Button
+        android:id="@+id/btnProfileChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="Change Password"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:background="@color/colorPrimary"/>
+
+
+</RelativeLayout>

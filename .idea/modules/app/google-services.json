@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "7803500251",
+    "firebase_url": "https://emcart-6e678.firebaseio.com",
+    "project_id": "emcart-6e678",
+    "storage_bucket": "emcart-6e678.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7803500251:android:12bb55691512d353bf3efe",
+        "android_client_info": {
+          "package_name": "student.inti.com.emcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7803500251-0mkmaje2koikr4cdtde2udh7ecmngvf4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "student.inti.com.emcart",
+            "certificate_hash": "b9e1bcf6357036267c4e41b94b7db760b6e584be"
+          }
+        },
+        {
+          "client_id": "7803500251-lp1c6jkce5sgs9r869bhe27hvsci326n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMGaFehSEh_wOcWPVrZP0i1lJvL_ur_vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7803500251-lp1c6jkce5sgs9r869bhe27hvsci326n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

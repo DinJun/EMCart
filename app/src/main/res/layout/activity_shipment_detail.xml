@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShipmentDetailActivity">
+
+    <ScrollView
+        android:id="@+id/svShipmentDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/rlStatusText">
+
+        <RelativeLayout
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tvshipmentDetailNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailPhoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone number: "
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailNameText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date ordered: "
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailPhoneText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time ordered: "
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailDateText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailTotalPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total price: RM"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailTimeText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailAddressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: "
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailTotalPriceText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_toRightOf="@+id/tvshipmentDetailNameText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailName"
+                android:layout_toRightOf="@+id/tvshipmentDetailPhoneText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailPhone"
+                android:layout_toRightOf="@+id/tvshipmentDetailDateText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailDate"
+                android:layout_toRightOf="@+id/tvshipmentDetailTimeText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailTime"
+                android:layout_toRightOf="@+id/tvshipmentDetailTotalPriceText"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_below="@+id/tvshipmentDetailTotalPrice"
+                android:layout_toRightOf="@+id/tvshipmentDetailAddressText"/>
+
+            <View
+                android:id="@+id/vShippingDetailDivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/black"
+                android:layout_below="@id/tvshipmentDetailAddress"/>
+
+            <TextView
+                android:id="@+id/tvshipmentDetailItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITEMS"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/vShippingDetailDivider"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_shipping_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/tvshipmentDetailItemText"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlStatusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnConfirmReceived"
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/tvshipmentDetailStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: "
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite" />
+            <TextView
+                android:id="@+id/tvshipmentDetailStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvshipmentDetailStatusText"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnConfirmReceived"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:text="Order Received" />
+</RelativeLayout>

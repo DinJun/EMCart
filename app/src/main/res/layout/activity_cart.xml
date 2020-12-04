@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/rlTotalPriceText">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rlTotalPriceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnProceed"
+        android:background="@color/colorPrimary">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp">
+        <TextView
+            android:id="@+id/tvCartText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Price: RM"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite" />
+        <TextView
+            android:id="@+id/tvCartTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvCartText"
+            android:text="0.00"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Proceed"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

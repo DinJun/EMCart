@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReloadActivity">
+
+    <RelativeLayout
+        android:id="@+id/titleReload"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@drawable/register_bg">
+
+        <TextView
+            android:id="@+id/tvRegisterWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Reload"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/etReloadAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Amount"
+        android:maxLength="4"
+        android:inputType="number"
+        android:layout_below="@id/titleReload" />
+
+    <EditText
+        android:id="@+id/etReloadPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Current Password"
+        android:layout_below="@id/etReloadAmount" />
+
+    <Button
+        android:id="@+id/btnReload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:text="Reload"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
